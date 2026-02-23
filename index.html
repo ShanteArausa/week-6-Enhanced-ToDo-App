@@ -5,33 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Enhanced To-Do App</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- defer ensures script runs after DOM is loaded -->
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
-    <h1>Enhanced To-Do List</h1>
+    <h1>Enhanced To-Do App</h1>
   </header>
 
   <main>
-    <section id="todo-app">
+    <section class="todo-app">
       <form id="todo-form">
-        <input type="text" id="todo-input" placeholder="Enter a new task" required>
-        <button type="submit">Add Task</button>
-      </form>
+  <input type="text" id="todo-input" placeholder="Type something">
+
+  <select id="priority">
+    <option value="High">High</option>
+    <option value="Medium" selected>Medium</option>
+    <option value="Low">Low</option>
+  </select>
+
+  <button type="submit" id="add-btn" disabled>Add</button>
+</form>
 
       <div id="filters">
         <button id="filter-all">All</button>
         <button id="filter-active">Active</button>
         <button id="filter-completed">Completed</button>
+        <button id="clear-completed">Clear Completed</button>
       </div>
 
-      <ul id="todo-list"></ul>
+      <ul id="list"></ul>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Shante Arausa-Jones</p>
+    <p>&copy; 2026 Shante Arausa-Jones. All rights reserved.</p>
+    <p>Connect with me on 
+      <a href="https://www.linkedin.com/in/shante-arausa-jones" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
